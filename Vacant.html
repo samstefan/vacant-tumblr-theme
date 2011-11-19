@@ -240,8 +240,7 @@
 			
 	{CustomCSS}
 				
-	</style>
-	<!-- End of CSS -->
+	</style><!-- End of CSS -->
 	
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -284,22 +283,19 @@
 	<meta name="text:Twitter Username" content=""/>
 	<meta name="text:YouTube Username" content=""/>
 		
-</head>
-<!-- End Head -->
+</head><!-- End Head -->
 
 <body>
 
-	<!-- Start Page Wrapper -->	
 	<div id="Wrapper">
-			
-		<!-- Start Header -->
+		
 		<div id="Header">
 			<div id="BlogTitle"><a href="/" title="{Title}">{Title}</a></div>
 			<ol id="TopNavNumbers">
 				<li class="Search">00.</li>
 				<li>01.</li>
 				<li>02.</li>
-			</ol>
+			</ol><!-- End Top Navigation -->
 			<div class="HeaderBreak"></div>
 			
 			<div id="LowerHeader">
@@ -309,23 +305,17 @@
 				<form action="/search" method="get" >
 					<input id="Search" class="SearchBox" type="text" name="q" value="{SearchQuery}" placeholder="Search"/>
 				</form>
-			</div>
+			</div><!-- End Lower Header -->
 			<div class="HeaderBreak"></div>
-		</div>
-		<!-- End Header -->				
-		
+		</div><!-- End Header -->		
+				
 		<!-- Body -->
 		<div id="Body">
 		
-			<!-- Side Bar -->
 			<div id="SideBar">
 				<img id="ProfilePhoto" src="{PortraitURL-128}" alt="Profile Photo" />
 					
-				{block:Description}
-				<div id="Description">
-				{Description}		
-				</div>
-				{/block:Description}
+				{block:Description}<div id="Description">{Description}</div>{/block:Description}
 				
 				<ol id="SideBarNav">
 					{block:AskEnabled}<li><a href="/ask" title="Ask a question">{AskLabel}</a></li>{/block:AskEnabled}
@@ -342,18 +332,14 @@
 					{block:IfSvpplyUsername}<li><a href="http://svpply.com/{text:Svpply Username}" title="Svpply">Svpply</a></li>{/block:IfSvpplyUsername}
 					{block:IfTwitterUsername}<li><a href="http://twitter.com/{text:Twitter Username}" title="Twitter">Twitter</a></li>{/block:IfTwitterUsername}
 					{block:IfYouTubeUsername}<li><a href="http://youtube.com/user/{text:YouTube Username}" title="YouTube">YouTube</a></li>{/block:IfYouTubeUsername}
-				</ol>
+				</ol><!-- End SideBar Navigation -->
 				
-			</div>
-			<!-- End Side Bar  -->
+			</div><!-- End Side Bar  -->
 			
 			<div id="Posts">
 			{block:Posts}
-			
-			<!-- Posts -->
-			
+					
 			{block:Answer}
-			<!-- Answer Post -->
 			<div class="AnswerPost">
 				<div class="AnswerIcon"></div>
 				<div class="PostTitle">{Asker} Asked</div>
@@ -361,24 +347,20 @@
 					<span class="Question"><span class="QuestionHighlight">Question</span>{Question}</span>
 					<span class="Answer"><span class="QuestionHighlight">Anwser</span>{Answer}</span>
 				</div>
-			</div>
-			<!-- End Answer Post -->
+			</div><!-- End Answer Post -->
 			{/block:Answer}
 			
 			{block:Photo}
-			<!-- Photo Post -->
 			<div class="PhotoPost">
 				<div class="PhotoWrapper">
 					{LinkOpenTag}	
 						<img class="PhotoPostImage" src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
 					{LinkCloseTag}
-				</div>
+				</div><!-- End Photo Wrapper -->
 				
 				<div class="PhotoIcon"></div>
 				
-				{block:Caption}
-				<div class="PhotoCaption">{Caption}</div>
-				{/block:Caption}
+				{block:Caption}<div class="PhotoCaption">{Caption}</div>{/block:Caption}
 				
 				{block:Exif}
 				<ol class="CameraMeta">
@@ -386,21 +368,19 @@
 					<li>{block:Aperture}Aperture: {Aperture}{/block:Aperture}</li>
 					<li>{block:Exposure}Exposure: {Exposure}{/block:Exposure}</li>
 					<li>{block:FocalLength}Focal Length: {FocalLength}{/block:FocalLength}</li>
-				</ol>
+				</ol><!-- End Campera Meta Info -->
 				{/block:Exif}
 			
-			</div>
-			<!-- End Photo Post -->
+			</div><!-- End Photo Post -->		
 			{/block:Photo}
 			
 			{block:Photoset}
-			<!--  Photoset Post -->
 			<div class="PhotoSetPost">
   				{block:Photos}
   					{block:HighRes}
   					<a class="HighResPhotoSet" href="{PhotoURL-HighRes}">
   						<img class="PhotoPostImage" src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
-  					</a>
+  					</a><!-- End PhootSet HighRes -->
   					{/block:HighRes}
 				{/block:Photos}
 
@@ -409,14 +389,12 @@
 				<div class="PhotoSetIcon"></div>
             	<div class="PhotoCaption">{Caption}</div>
             
-            </div>            
-			<!-- End Photoset Post -->
+            </div><!-- End Photoset Post -->        
 			{/block:Photoset}
 			
 			{block:Text}
-			<!-- Text Post -->
 			<div class="TextPost">
-							
+				
 				<div class="TextIcon"></div>
 				
 				{block:Title}
@@ -424,28 +402,23 @@
 				{/block:Title}
 				
 				<div class="TextPostBody">{Body}</div>
-								
-			</div>
-			<!-- End Text Post -->
+				
+			</div><!-- End Text Post -->
 			{/block:Text}
 			
 			{block:Quote}
-			<!-- Quote Post -->
 			<div class="QuotePost">
 				<div class="QuoteIcon"></div>
 	
 				<div class="Quote">"{Quote}"</div>
-
+				
 				{block:Source}
 				<div class="Source">&#8212; {Source}</div>
 				{/block:Source}
-			</div>
-			
-			<!-- End Quote Post -->
+			</div><!-- End Quote Post -->
 			{/block:Quote}
 						
 			{block:Link}
-			<!-- Link Post -->
 			<div class="LinkPost">
 				<div class="LinkIcon"></div>
 				<div class="PostTitle"><a href="{URL}" {Target}>{Name}</a></div>
@@ -453,12 +426,10 @@
 				{block:Description}
 				<div class="Description">{Description}</div>
 				{/block:Description}
-			</div>
-			<!-- End Link Post -->
+			</div><!-- End Link Post -->
 			{/block:Link}
 			
 			{block:Chat}
-			<!-- Chat Post -->
 			<li class="ChatPost">
 				<div class="ChatIcon"></div>
 
@@ -473,42 +444,37 @@
 						<span class="Label">{Label}</span>
 						{/block:Label}
                     	{Line}
-					</li>
+					</li><!-- End Chat Line -->
 					{/block:Lines}
-				</ul>
+				</ul><!-- End Chat Block -->
 				
-           </li>
-			<!-- End Chat Post -->
+			</li><!-- End Chat Post -->
 			{/block:Chat}		
 						
 			{block:Audio}
-			<!-- Audio Post -->
 			<div class="AudioPost">
 				<div class="AudioIcon"></div>
 				
 				{block:Artist}
 				<div class="PostTitle">
 					<a href="{Permalink}" title="{Artist} &#8211; {block:TrackName}{TrackName}{/block:TrackName}">{Artist} {block:TrackName}&#8211; {TrackName}{/block:TrackName}</a>
-				</div>
+				</div><!-- End Audio Post Title -->
 				{/block:Artist}
 						
 				<div class="AlbumArtHolder">
 					{block:AlbumArt}<img class="AlbumArt" src="{AlbumArtURL}" alt="Album Art"/>{/block:AlbumArt}
-				</div>
+				</div><!-- End Album Art Wrapper -->
 					
 				<div class="AudioInfo">
 					{AudioPlayerWhite}
 					<span class="AudioCaption">{block:Caption}{Caption}{/block:Caption}</span>
 					<span class="PlayCount">Played {PlayCount} times.</span>
-				</div>
+				</div><!-- End Audio Info -->
 
-            </div>
-			<!-- End Audio Post -->
+            </div><!-- End Audio Post -->
 			{/block:Audio}
 			
 			{block:Video}
-			<!-- Video Post -->
-			
 			<div class="VideoPost">
 				{Video-500}
 				<div class="VideoIcon"></div>
@@ -516,13 +482,10 @@
 				{block:Caption}
 				<div class="VideoCaption">{Caption}</div>
 				{/block:Caption}
-			</div>
-			
-			<!-- End Video Post -->
+			</div><!-- End Video Post -->
 			{/block:Video}			
 			
 			<div class="Footer">
-			<!-- Post Meta -->
 				<div class="FooterLine"></div>
 				<ol>
 					{block:Date}
@@ -531,7 +494,7 @@
 							<img src="http://static.tumblr.com/ubkenek/W8Rlmyhj3/datepostedicon.png"/>
 							{DayOfMonth}{DayOfMonthSuffix} {Month} {Year}
 						</a>
-					</li>
+					</li><!-- End Footer Date -->
 					{/block:Date}
 					{block:RebloggedFrom}
 					<li>
@@ -539,7 +502,7 @@
 							<img src="http://static.tumblr.com/ubkenek/5XKlmzvlj/reblogedicon.png" alt="Reblogged Icon"/>
 							Reblogged From {ReblogParentName}
 						</a>
-					</li>
+					</li><!-- End Footer Reblog Link -->
 					{/block:RebloggedFrom}
 					{block:NoteCount}
 					<li>
@@ -547,7 +510,7 @@
 						<img src="http://static.tumblr.com/ubkenek/Qnilmyiga/notesicon.png"/>
 						Notes: {NoteCount}
 						</a>
-					</li>
+					</li><!-- End Note Count -->
 					{/block:NoteCount}
 					{block:HasTags}
 					<div class="Tags">
@@ -555,14 +518,13 @@
 						{block:Tags}
 							<a href="{TagURL}">#{Tag}</a>
 						{/block:Tags}
-					</div>
+					</div><!-- End Tags -->
 					{/block:HasTags}
-				</ol>	
-			</div>
+				</ol><!-- End Folter Link Blocks -->
+			</div><!-- End Footer -->
 			  
 			{block:IfDisqusShortname}
-			<div id="Disqus">
-				<!-- Disqus -->			
+			<div id="Disqus">	
 				<script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>{block:Permalink}<div id="disqus_thread"></div>
 				<script type="text/javascript">
 				/**
@@ -584,43 +546,40 @@
 					(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
 				}());
 				</script>
-				<!-- End Disqus -->
-			</div>
+			</div><!-- End Disqus -->
 			{/block:IfDisqusShortname}
 			
 			<div class="FooterBoarder"></div>
-			<!-- End Footer -->
 						
 			{PostNotes}
 			
-			<!-- End Posts -->	
-			{/block:Posts}
-			</div>
-		</div>
-		<!-- End Body -->
+			{/block:Posts}<!-- End Posts -->
+			
+			</div><!-- End Footer -->
+			
+		</div><!-- End Body -->
 		
 		<div class="Pagination">
 			<div id="TotlePages">
 				Page {CurrentPage} <span id="PageOf">of</span> {TotalPages}
-			</div>
+			</div><!-- End Totle Pages -->
 			
 			{block:NextPage}
 			<div id="Next">
 				<a href="{NextPage}" title="Go to the next page">Next</a>
-			</div>
+			</div><!-- End Next Button -->
 			{/block:NextPage}
 				
 			{block:PreviousPage}
 			<div id="Back">
 				<a href="{PreviousPage}" title="Go to the previous page">Back</a>
-			</div>
+			</div><!-- End Back Button -->
 			{/block:PreviousPage}
-		</div>
+		</div><!-- End Pagination -->
 		
-		<div id="Copyright">This blog is powered by <a href="http://tumblr.com" title="Tumblr">Tumblr</a> and designed by <a href="http://blog.samstefan.co.uk" title="Sam Stefan's website">Sam Stefan</a>.</div>
+		<div id="Copyright">This blog is powered by <a href="http://tumblr.com" title="Tumblr">Tumblr</a> and designed by <a href="http://blog.samstefan.co.uk" title="Sam Stefan's website">Sam Stefan</a>.</div><!-- End Copyright -->
 			
-	</div>
-	<!-- End Page Wrapper -->
-							
+	</div><!-- End Page Wrapper -->
+					
 </body>
 </html>
