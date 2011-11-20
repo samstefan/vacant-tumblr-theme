@@ -1,7 +1,7 @@
 # Vacant Tumblr Theme v1.2
 
 [Demo](http://vacant.samstefan.co.uk) and
-[Official Tumblr Install](http://www.tumblr.com/theme/31180).
+[Tumblr Install](http://www.tumblr.com/theme/31180).
 
 ## What is Vacant
 
