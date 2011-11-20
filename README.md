@@ -34,7 +34,7 @@ Please give credit where its due - If not at the very least, leave the link in t
 
 ## Credits
 
-
-
 Vacant was created by the [Sam Stefan](http://samstefanc.co.uk).
+
+Infinite Scroll jQuery plugin copyright Paul Irish, licensed GPL & MIT.
 
