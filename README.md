@@ -1,6 +1,6 @@
 # Vacant Tumblr Theme v1.2
 
-[Demo](http://vacant.samstefan.co.uk)
+[Demo](http://vacant.samstefan.co.uk)</br>
 [Official Tumblr Install](http://www.tumblr.com/theme/31180)
 
 ## What is Vacant
@@ -15,8 +15,8 @@ Vacant is a minimal 2 column Tumblr theme designed to show content at a large sc
 
 ### 1.1
 
-* Low-res Photoset support and detection added by [Craig Rood](http://www.craigrood.com)
-* Low-res Photoset centring.
+* Low-res photoset support and detection added by [Craig Rood](http://www.craigrood.com)
+* Low-res photoset centring.
 
 ### 1.0
 
@@ -28,9 +28,7 @@ Install the theme via the [theme page](http://www.tumblr.com/theme/31180) or cop
 
 ## Licence
 
-Vacant may be used by anyone for any purpose, in both a personal and commercial website or product. 
-
-Please give credit where its due - If not at the very least, leave the link in the footer.
+Vacant may be used by anyone for any purpose, in both a personal and commercial website or product. Please give credit where its due - If not at the very least, leave the link in the footer.
 
 ## Credits
 
