@@ -73,10 +73,13 @@
 	#SideBar {width: 140px; float: left; clear: none; font-size: 12px; margin: 0 20px 0 0;}
 	#Description {float: left; clear: both; margin: 10px 0;}
 	#SideBarNav {width: 140px; float: left; clear: none; border-top: 1px solid rgb(209,210,213); font-weight: bold; font-size: 14px;}
-	#SideBarNav li { width: 140px; border-bottom: 1px solid rgb(209,210,213); margin-top: 5px; padding-bottom: 5px;}
+	#SideBarNav li {width: 140px; border-bottom: 1px solid rgb(209,210,213); margin: 5px 0; padding-bottom: 5px;}
 	#SideBarNav li a {color: rgb(63,63,63);}
 	#SideBarNav li a:hover {color: rgb(0,0,0);}
 	
+	#SocialLinks {width: 140px; float: left; clear: both;}
+	#SocialLinks a {float: left; clear: none; margin: 5px 5px 0 0;}
+	#SocialLinks a:hover {opacity: 0.5;}
 	/*========================================================
 		Page Content
 	========================================================*/
@@ -270,28 +273,27 @@
 	<meta name="text:Flickr Username" content=""/>
 	<meta name="text:Forrst Username" content=""/>
 	<meta name="text:Foursquare Username" content=""/>
-	<meta name="text:GoodReads Username" content=""/>
+	<meta name="text:GitHub Username" content=""/>
+	<meta name="text:GooglePlus Usernumber" content=""/>
 	<meta name="text:Lastfm Username" content=""/>
-	<meta name="text:Svpply Username" content=""/>
+	<meta name="text:LetterBoxd Username" content=""/>
 	<meta name="text:Twitter Username" content=""/>
-	<meta name="text:YouTube Username" content=""/>
+	<meta name="text:Vimeo Username" content=""/>
+	<!-- <meta name="text:YouTube Username" content=""/>  -->
 		
-</head>
-<!-- End Head -->
+</head><!-- End Head -->
 
 <body>
 
-	<!-- Start Page Wrapper -->	
 	<div id="Wrapper">
 			
-		<!-- Start Header -->
 		<div id="Header">
 			<div id="BlogTitle"><a href="/" title="{Title}">{Title}</a></div>
 			<ol id="TopNavNumbers">
 				<li class="Search">00.</li>
 				<li>01.</li>
 				<li>02.</li>
-			</ol>
+			</ol><!-- End Top Navigation -->
 			<div class="HeaderBreak"></div>
 			
 			<div id="LowerHeader">
@@ -300,77 +302,129 @@
 				<a class="HeaderLinks" href="/random">Random</a>
 				<form action="/search" method="get" >
 					<input id="Search" class="SearchBox" type="text" name="q" value="{SearchQuery}" placeholder="Search"/>
-				</form>
-			</div>
+				</form><!-- End Search Box Form -->
+			</div><!-- End Lower Header -->
 			<div class="HeaderBreak"></div>
-		</div>
-		<!-- End Header -->				
+		</div><!-- End Header -->
 		
-		<!-- Body -->
 		<div id="Body">
 		
-			<!-- Side Bar -->
 			<div id="SideBar">
 				<img id="ProfilePhoto" src="{PortraitURL-128}" alt="Profile Photo" />
 					
-				{block:Description}
-				<div id="Description">
-				{Description}		
-				</div>
-				{/block:Description}
+				{block:Description}<div id="Description">{Description}</div>{/block:Description}
 				
 				<ol id="SideBarNav">
 					{block:AskEnabled}<li><a href="/ask" title="Ask a question">{AskLabel}</a></li>{/block:AskEnabled}
 					<li><a href="{RSS}" title="RSS Feed">RSS Feed</a></li>
 					<li><a href="/mobile" title="View mobile version">Mobile</a></li>
+					
 					{block:HasPages}{block:Pages}<li><a href="{URL}" title="{Label}">{Label}</a></li>{/block:Pages}{/block:HasPages}
-					{block:IfDribbbleUsername}<li><a href="http://dribbble.com/{text:Dribbble Username}" title="Dribbble">Dribbble</a></li>{/block:IfDribbbleUsername}
-					{block:IfFacebookUsername}<li><a href="http://facebook.com/{text:Facebook Username}" title="Facebook">Facebook</a></li>{/block:IfFacebookUsername}
-					{block:IfFlickrUsername}<li><a href="http://flickr.com/{text:Flickr Username}" title="Flickr">Flickr</a></li>{/block:IfFlickrUsername}
-					{block:IfForrstUsername}<li><a href="http://forrst.com/people/{text:Forrst Username}" title="Forrst">Forrst</a></li>{/block:IfForrstUsername}
-					{block:IfFoursquareUsername}<li><a href="https://foursquare.com/{text:Foursquare Username}" title="Foursquare">Foursquare</a></li>{/block:IfFoursquareUsername}
-					{block:IfGoodReadsUsername}<li><a href="http://goodreads.com/{text:GoodReads Username}" title="GoodReads">GoodReads</a></li>{/block:IfGoodReadsUsername}
-					{block:IfLastfmUsername}<li><a href="http://last.fm/user/{text:Lastfm Username}" title="Last fm">Last fm</a></li>{/block:IfLastfmUsername}
-					{block:IfSvpplyUsername}<li><a href="http://svpply.com/{text:Svpply Username}" title="Svpply">Svpply</a></li>{/block:IfSvpplyUsername}
-					{block:IfTwitterUsername}<li><a href="http://twitter.com/{text:Twitter Username}" title="Twitter">Twitter</a></li>{/block:IfTwitterUsername}
-					{block:IfYouTubeUsername}<li><a href="http://youtube.com/user/{text:YouTube Username}" title="YouTube">YouTube</a></li>{/block:IfYouTubeUsername}
-				</ol>
+				</ol><!-- End SideBar Navigation -->
+					
+				<div id="SocialLinks">
 				
-			</div>
-			<!-- End Side Bar  -->
+					{block:IfDribbbleUsername}
+					<a href="http://dribbble.com/{text:Dribbble Username}" title="Dribbble">
+						<img src="http://static.tumblr.com/ubkenek/pvyluyuim/dribbble-icon.png" alt="Dribble Icon"/>
+					</a><!-- End Dribbl  e Link -->
+					{/block:IfDribbbleUsername}
+					
+					{block:IfFacebookUsername}
+					<a href="http://facebook.com/{text:Facebook Username}" title="Facebook">
+						<img src="http://static.tumblr.com/ubkenek/AIkluyulc/facebook-icon.png" alt="Facebook Icon"/>
+					</a><!-- End Facebook Link -->
+					{/block:IfFacebookUsername}
+					
+					{block:IfFlickrUsername}
+					<a href="http://flickr.com/{text:Flickr Username}" title="Flickr">
+						<img src="http://static.tumblr.com/ubkenek/SAAluyut9/flickr-icon.png" alt="Flickr Icon"/>
+					</a><!-- End Flickr Link -->
+					{/block:IfFlickrUsername}
+					
+					{block:IfForrstUsername}
+					<a href="http://forrst.com/people/{text:Forrst Username}" title="Forrst">
+						<img src="http://static.tumblr.com/ubkenek/rfoluyuxn/forrst-icon.png" alt="Forrst Icon"/>
+					</a><!-- End Forrst Link -->
+					{/block:IfForrstUsername}
+					
+					{block:IfFoursquareUsername}
+					<a href="https://foursquare.com/{text:Foursquare Username}" title="Foursquare">
+						<img src="http://static.tumblr.com/ubkenek/S3Zluyv00/foursquare-icon.png" alt="Foursquare Icon"/>
+					</a><!-- End Foursquare -->
+					{/block:IfFoursquareUsername}
+					
+					{block:IfGitHubUsername}
+					<a href="https://github.com/{text:GitHub Username}" title="GitHub">
+						<img src="http://static.tumblr.com/ubkenek/Qv0luyv55/github-icon.png" alt="GitHub"/>
+					</a><!-- End GitHub Link -->
+					{/block:IfGitHubUsername}
+					
+					{block:IfGooglePlusUsernumber}
+					<a href="https://plus.google.com/u/1/{text:GooglePlus Usernumber}" title="Google Plus">
+						<img src="http://static.tumblr.com/ubkenek/G6uluz2hj/googleplus-icon.png" alt="GooglePlus Icon"/>
+					</a><!-- End Google Plus Link -->
+					{/block:IfGooglePlusUsernumber}
+					
+					{block:IfLastfmUsername}
+					<a href="http://last.fm/user/{text:Lastfm Username}" title="Last fm">
+						<img src="http://static.tumblr.com/ubkenek/NMcluyvdm/lastfm-icon.png" alt="Last fm Icon"/>
+					</a><!-- End Last fm Link -->
+					{/block:IfLastfmUsername}
+					
+					{block:IfLetterBoxdUsername}
+					<a href="http://letterboxd.com/{text:LettedBoxd Username}" title="LetterBoxd">
+						<img src="http://static.tumblr.com/ubkenek/7JJluywko/letterboxd-icon.png" alt="LetterBoxd Icon"/>
+					</a><!-- End LetterBoxd Link -->
+					{/block:IfLetterBoxdUsername}
+					
+					{block:IfTwitterUsername}
+					<a href="http://twitter.com/{text:Twitter Username}" title="Twitter">
+						<img src="http://static.tumblr.com/ubkenek/wialuyvfa/twitter-icon.png" alt="Twitter Icon"/>
+					</a><!-- End Twitter Link -->
+					{/block:IfTwitterUsername}
+					
+					{block:IfVimeoUsername}
+					<a href="http://twitter.com/{text:Vimeo Username}" title="Vimeo">
+						<img src="http://static.tumblr.com/ubkenek/szjluyw9v/vimeo-icon.png" alt="Vimeo Icon"/>
+					</a><!-- End Vimeo Link -->
+					{/block:IfVimeoUsername}
+					
+					<!-- {block:IfYouTubeUsername}
+					<a href="http://youtube.com/user/{text:YouTube Username}" title="YouTube">
+						<img src="http://static.tumblr.com/ubkenek/c1Gluz2id/youtube-icon.png" alt="YouTube Icon"/>
+					</a>
+					{/block:IfYouTubeUsername} -->
+					
+				</div><!-- End Social Links -->
+				
+			</div><!-- End Side Bar  -->
 			
 			<div id="Posts">
 			{block:Posts}
 			
-			<!-- Posts -->
-			
 			{block:Answer}
-			<!-- Answer Post -->
 			<div class="AnswerPost">
 				<div class="AnswerIcon"></div>
 				<div class="PostTitle">{Asker} Asked</div>
 				<div class="TextPostBody">
 					<span class="Question"><span class="QuestionHighlight">Question</span>{Question}</span>
 					<span class="Answer"><span class="QuestionHighlight">Anwser</span>{Answer}</span>
-				</div>
-			</div>
-			<!-- End Answer Post -->
+				</div><!-- End Post Body -->
+			</div><!-- End Answer Post -->
 			{/block:Answer}
 			
 			{block:Photo}
-			<!-- Photo Post -->
 			<div class="PhotoPost">
 				<div class="PhotoWrapper">
 					{LinkOpenTag}	
 						<img class="PhotoPostImage" src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
 					{LinkCloseTag}
-				</div>
+				</div><!-- End Photo Wrapper -->
 				
 				<div class="PhotoIcon"></div>
 				
-				{block:Caption}
-				<div class="PhotoCaption">{Caption}</div>
-				{/block:Caption}
+				{block:Caption}<div class="PhotoCaption">{Caption}</div>{/block:Caption}
 				
 				{block:Exif}
 				<ol class="CameraMeta">
@@ -378,11 +432,9 @@
 					<li>{block:Aperture}Aperture: {Aperture}{/block:Aperture}</li>
 					<li>{block:Exposure}Exposure: {Exposure}{/block:Exposure}</li>
 					<li>{block:FocalLength}Focal Length: {FocalLength}{/block:FocalLength}</li>
-				</ol>
+				</ol><!-- End Camera Exif Info -->
 				{/block:Exif}
-			
-			</div>
-			<!-- End Photo Post -->
+			</div><!-- End Photo Post -->
 			{/block:Photo}
 			
 			{block:Photoset}
@@ -392,71 +444,48 @@
   					{block:HighRes}
   					<a class="HighResPhotoSet" href="{PhotoURL-HighRes}">
   						<img class="PhotoPostImage" src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
-  					</a>
+  					</a><!-- End HighRes Photo Set -->
   					{/block:HighRes}
 				{/block:Photos}
 
 				<div class="SmallPhotoSet">{Photoset-500}</div>
 				
 				<div class="PhotoSetIcon"></div>
-            	<div class="PhotoCaption">{Caption}</div>
-            
-            </div>            
-			<!-- End Photoset Post -->
+            	<div class="PhotoCaption">{Caption}</div> 
+            </div><!-- End Photoset Post -->
 			{/block:Photoset}
 			
 			{block:Text}
-			<!-- Text Post -->
 			<div class="TextPost">
-							
 				<div class="TextIcon"></div>
+				{block:Title}<div class="PostTitle"><a href="{Permalink}">{Title}</a></div>{/block:Title}
 				
-				{block:Title}
-				<div class="PostTitle"><a href="{Permalink}">{Title}</a></div>
-				{/block:Title}
-				
-				<div class="TextPostBody">{Body}</div>
-								
-			</div>
-			<!-- End Text Post -->
+				<div class="TextPostBody">{Body}</div>			
+			</div><!-- End Text Post -->
 			{/block:Text}
 			
 			{block:Quote}
-			<!-- Quote Post -->
 			<div class="QuotePost">
 				<div class="QuoteIcon"></div>
 	
 				<div class="Quote">"{Quote}"</div>
-
-				{block:Source}
-				<div class="Source">&#8212; {Source}</div>
-				{/block:Source}
-			</div>
-			
-			<!-- End Quote Post -->
+				{block:Source}<div class="Source">&#8212; {Source}</div>{/block:Source}
+			</div><!-- End Quote Post -->
 			{/block:Quote}
 						
 			{block:Link}
-			<!-- Link Post -->
 			<div class="LinkPost">
 				<div class="LinkIcon"></div>
 				<div class="PostTitle"><a href="{URL}" {Target}>{Name}</a></div>
 			
-				{block:Description}
-				<div class="Description">{Description}</div>
-				{/block:Description}
-			</div>
-			<!-- End Link Post -->
+				{block:Description}<div class="Description">{Description}</div>{/block:Description}
+			</div><!-- End Link Post -->
 			{/block:Link}
 			
 			{block:Chat}
-			<!-- Chat Post -->
-			<li class="ChatPost">
+			<div class="ChatPost">
 				<div class="ChatIcon"></div>
-
-				{block:Title}
-				<div class="PostTitle"><a href="{Permalink}">{Title}</a></div>
-				{/block:Title}
+				{block:Title}<div class="PostTitle"><a href="{Permalink}">{Title}</a></div>{/block:Title}
 				
 				<ul class="Chat">
 					{block:Lines}
@@ -465,96 +494,81 @@
 						<span class="Label">{Label}</span>
 						{/block:Label}
                     	{Line}
-					</li>
+					</li><!-- End Chat Line -->
 					{/block:Lines}
-				</ul>
-				
-           </li>
-			<!-- End Chat Post -->
+				</ul><!-- End Chat Block -->
+			</div><!-- End Chat Post -->
 			{/block:Chat}		
 						
 			{block:Audio}
-			<!-- Audio Post -->
 			<div class="AudioPost">
 				<div class="AudioIcon"></div>
 				
 				{block:Artist}
 				<div class="PostTitle">
 					<a href="{Permalink}" title="{Artist} &#8211; {block:TrackName}{TrackName}{/block:TrackName}">{Artist} {block:TrackName}&#8211; {TrackName}{/block:TrackName}</a>
-				</div>
+				</div><!-- End Audio Post Title / Artist / Track Name -->
 				{/block:Artist}
 						
 				<div class="AlbumArtHolder">
 					{block:AlbumArt}<img class="AlbumArt" src="{AlbumArtURL}" alt="Album Art"/>{/block:AlbumArt}
-				</div>
+				</div><!-- End AlbumArt Wrapper -->
 					
 				<div class="AudioInfo">
 					{AudioPlayerWhite}
 					<span class="AudioCaption">{block:Caption}{Caption}{/block:Caption}</span>
 					<span class="PlayCount">Played {PlayCount} times.</span>
-				</div>
-
-            </div>
-			<!-- End Audio Post -->
+				</div><!-- End Audio Info / Player -->
+            </div><!-- End Audio Post -->
 			{/block:Audio}
 			
 			{block:Video}
-			<!-- Video Post -->
-			
 			<div class="VideoPost">
 				{Video-500}
 				<div class="VideoIcon"></div>
 	
-				{block:Caption}
-				<div class="VideoCaption">{Caption}</div>
-				{/block:Caption}
-			</div>
-			
-			<!-- End Video Post -->
+				{block:Caption}<div class="VideoCaption">{Caption}</div>{/block:Caption}
+			</div><!-- End Video Post -->
 			{/block:Video}			
 			
 			<div class="Footer">
-			<!-- Post Meta -->
 				<div class="FooterLine"></div>
 				<ol>
 					{block:Date}
 					<li>
 						<a href="{Permalink}" title="Date Posted"/>
-							<img src="http://static.tumblr.com/ubkenek/W8Rlmyhj3/datepostedicon.png"/>
+							<img src="http://static.tumblr.com/ubkenek/W8Rlmyhj3/datepostedicon.png" alt="Date Posted Icon"/>
 							{DayOfMonth}{DayOfMonthSuffix} {Month} {Year}
-						</a>
-					</li>
+						</a><!-- End Date Posted Link -->
+					</li><!-- End Date Posted Wrapper -->
 					{/block:Date}
 					{block:RebloggedFrom}
 					<li>
 						<a href="{ReblogParentURL}" title="{ReblogParentTitle}">
 							<img src="http://static.tumblr.com/ubkenek/5XKlmzvlj/reblogedicon.png" alt="Reblogged Icon"/>
 							Reblogged From {ReblogParentName}
-						</a>
-					</li>
+						</a><!-- End Reblog From Link -->
+					</li><!-- End Rebloged From Wrapper -->
 					{/block:RebloggedFrom}
 					{block:NoteCount}
 					<li>
 						<a href="{Permalink}" title="Notes"/>
-						<img src="http://static.tumblr.com/ubkenek/Qnilmyiga/notesicon.png"/>
-						Notes: {NoteCount}
-						</a>
-					</li>
+							<img src="http://static.tumblr.com/ubkenek/Qnilmyiga/notesicon.png" alt="Notes Icon"/>
+							Notes: {NoteCount}
+						</a><!-- End Notes Link -->
+					</li><!-- End Notes Wrapper -->
 					{/block:NoteCount}
 					{block:HasTags}
 					<div class="Tags">
-						<img src="http://static.tumblr.com/ubkenek/CVXlmyivc/tagsicon.png"/>
-						{block:Tags}
-							<a href="{TagURL}">#{Tag}</a>
-						{/block:Tags}
-					</div>
+						<img src="http://static.tumblr.com/ubkenek/CVXlmyivc/tagsicon.png" alt="Tags Icon"/>
+						{block:Tags}<a href="{TagURL}">#{Tag}</a>{/block:Tags}
+					</div><!-- End Post Tags -->
 					{/block:HasTags}
-				</ol>	
-			</div>
+				</ol><!-- End Post Footer -->
+			</div><!-- End Post Footer Wrapper -->
 			  
 			{block:IfDisqusShortname}
 			<div id="Disqus">
-				<!-- Disqus -->			
 				<script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>{block:Permalink}<div id="disqus_thread"></div>
 				<script type="text/javascript">
 				/**
@@ -576,8 +590,7 @@
 					(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
 				}());
 				</script>
-				<!-- End Disqus -->
-			</div>
+			</div><!-- End Disqus -->
 			{/block:IfDisqusShortname}
 			
 			<div class="FooterBoarder"></div>
@@ -585,34 +598,31 @@
 						
 			{PostNotes}
 			
-			<!-- End Posts -->	
 			{/block:Posts}
-			</div>
-		</div>
-		<!-- End Body -->
-		
+			</div><!-- End Posts -->	
+		</div><!-- End Body Content -->
+	
 		<div class="Pagination">
 			<div id="TotlePages">
 				Page {CurrentPage} <span id="PageOf">of</span> {TotalPages}
-			</div>
+			</div><!-- End Totle Pages -->
 			
 			{block:NextPage}
 			<div id="Next">
 				<a href="{NextPage}" title="Go to the next page">Next</a>
-			</div>
+			</div><!-- End Next Page Button -->
 			{/block:NextPage}
 				
 			{block:PreviousPage}
 			<div id="Back">
 				<a href="{PreviousPage}" title="Go to the previous page">Back</a>
-			</div>
+			</div><!-- End Back Page Button -->
 			{/block:PreviousPage}
-		</div>
+		</div><!-- End Pagination -->
 		
 		<div id="Copyright">This blog is powered by <a href="http://tumblr.com" title="Tumblr">Tumblr</a> and designed by <a href="http://blog.samstefan.co.uk" title="Sam Stefan's website">Sam Stefan</a>.</div>
 			
-	</div>
-	<!-- End Page Wrapper -->
-							
-</body>
-</html>
+	</div><!-- End Page Wrapper -->
+	
+</body><!-- End Body -->
+</html><!-- End HTML -->
