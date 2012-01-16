@@ -32,7 +32,7 @@ Vacant may be used by anyone for any purpose, in both a personal and commercial 
 
 ## Credits
 
-Vacant was created by the [Sam Stefan](http://samstefan.co.uk).
+Vacant was created by [Sam Stefan](http://samstefan.co.uk).
 
 Infinite Scroll jQuery Plugin Copyright Paul Irish, Licensed GPL & MIT.
 
