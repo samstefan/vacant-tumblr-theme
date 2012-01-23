@@ -316,6 +316,8 @@
 				
 				<ol id="SideBarNav">
 					{block:AskEnabled}<li><a href="/ask" title="Ask a question">{AskLabel}</a></li>{/block:AskEnabled}
+					{block:SubmissionsEnabled}<li><a href="/submit" title="{SubmitLabel}">{SubmitLabel}</a></li>{/block:SubmissionsEnabled} 
+					
 					<li><a href="{RSS}" title="RSS Feed">RSS Feed</a></li>
 					<li><a href="/mobile" title="View mobile version">Mobile</a></li>
 					
@@ -389,7 +391,7 @@
 						<img src="http://static.tumblr.com/ubkenek/szjluyw9v/vimeo-icon.png" alt="Vimeo Icon"/>
 					</a><!-- End Vimeo Link -->
 					{/block:IfVimeoUsername}
-					
+										
 					<!-- {block:IfYouTubeUsername}
 					<a href="http://youtube.com/user/{text:YouTube Username}" title="YouTube">
 						<img src="http://static.tumblr.com/ubkenek/c1Gluz2id/youtube-icon.png" alt="YouTube Icon"/>
