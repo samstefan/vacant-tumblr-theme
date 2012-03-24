@@ -29,7 +29,7 @@
 	{block:IfInfiniteScroll}<script type="text/javascript" src="http://static.tumblr.com/ubkenek/ul4ljjlod/scroll.js"></script>{/block:IfInfiniteScroll}
 
 	<style type="text/css">
-
+	
 	/*========================================================
 		Basics Page Setup                                                                                 
 	========================================================*/		
@@ -240,7 +240,7 @@
 	
 	<script type="text/javascript">
 		$(document).ready(function() {
-
+			
 			//Removes small photo sets if high-res version exists
 			jQuery.fn.exists = function(){return jQuery(this).length>0;}
 			
@@ -453,7 +453,7 @@
 				<div class="SmallPhotoSet">{Photoset-500}</div>
 				
 				<div class="PhotoSetIcon"></div>
-            	<div class="PhotoCaption">{Caption}</div> 
+            	<div class="PhotoCaption">{JSPhotosetLayout}</div> 
             </div><!-- End Photoset Post -->
 			{/block:Photoset}
 			
@@ -538,7 +538,7 @@
 				<ol>
 					{block:Date}
 					<li>
-						<a href="{Permalink}" title="Date Posted"/>
+						<a href="{Permalink}" title="Date Posted">
 							<img src="http://static.tumblr.com/ubkenek/W8Rlmyhj3/datepostedicon.png" alt="Date Posted Icon"/>
 							{DayOfMonth}{DayOfMonthSuffix} {Month} {Year}
 						</a><!-- End Date Posted Link -->
@@ -554,7 +554,7 @@
 					{/block:RebloggedFrom}
 					{block:NoteCount}
 					<li>
-						<a href="{Permalink}" title="Notes"/>
+						<a href="{Permalink}" title="Notes">
 							<img src="http://static.tumblr.com/ubkenek/Qnilmyiga/notesicon.png" alt="Notes Icon"/>
 							Notes: {NoteCount}
 						</a><!-- End Notes Link -->
