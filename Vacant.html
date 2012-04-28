@@ -4,8 +4,8 @@
 <head>
 
 	<!--
-	Vacant - 1.2
-	Designd by CoSnap.
+	Vacant - 1.2.1
+	Designed by CoSnap.
 	cosnap.co.uk
 	-->
 
@@ -41,7 +41,7 @@
 	a:link, a:visited {color: {color:Highlight}; text-decoration: none;}
 	a:hover {color: rgb(63,63,63);}
 	a:active {color: rgb(177,181,185);}
-	#SideBar, .Caption, .TextPostBody, .Source, .Description, .AudioInfo, .AudioEmbedCaption {line-height: 1.5;}
+	#SideBar, .Caption, .TextPostBody, .Source, .Description, .AudioInfo, .AudioEmbedCaption, .PhotoCaption {line-height: 1.5;}
 	#BlogTitle, .PostTitle, .Quote {text-shadow: 0 -1px 1px rgba(255,255,255,0.01);}
 	
 	#Posts b, #Posts strong {font-weight: bold;}
@@ -52,8 +52,12 @@
 	========================================================*/
 
 	#BlogTitle {width: 620px; float: left;	clear: none; font-size: 48px; font-weight: bold;}
-	#BlogTitle a {color: rgb(82,82,82);}	
+	#BlogTitle a, #BlogTitle a:link, #BlogTitle a:visited {color: {color:Title};}
+	#BlogTitle a:hover { opacity: 0.5; }
 	#BlogTitle a:active {top:1px; position:relative;}
+	
+	{block:IfSmallTitle}#BlogTitle {font-size: 25px; margin: 22px 0 0 0;}{/block:IfSmallTitle} 
+	
 	#TopNavNumbers {width: 320px; float: left; clear: none; font-family: Georgia, "Times New Roman", Serif; color: rgb(169,170,173); font-size: 13px;}
 	#TopNavNumbers li {width: 60px; float: left; clear: none; margin: 33px 0 0 20px; padding-bottom: 20px; border-bottom: 1px solid rgb(169,170,173); z-index: 2; position: relative;}
 	.Search, #Search {width: 140px !important;}
@@ -70,11 +74,12 @@
 		SideBar
 	========================================================*/
 	
-	#SideBar {width: 140px; float: left; clear: none; font-size: 12px; margin: 0 20px 0 0;}
-	#Description {width: inherit; float: left; clear: both; margin: 10px 0;}
+	#SideBar {width: 140px; float: left; clear: none; font-size: 12px; margin: 0 20px 0 0; color: {color:AltText};}
+	#Description {width: inherit; float: left; clear: both; margin: 0 0 10px 0;}
+	#ProfilePhoto {margin: 0 0 10px 0;} 
 	#SideBarNav {width: 140px; float: left; clear: none; border-top: 1px solid rgb(209,210,213); font-weight: bold; font-size: 14px;}
 	#SideBarNav li {width: 140px; border-bottom: 1px solid rgb(209,210,213); margin: 5px 0; padding-bottom: 5px;}
-	#SideBarNav li a {color: rgb(63,63,63);}
+	#SideBarNav li a {color: {color:AltText};}
 	#SideBarNav li a:hover {color: rgb(0,0,0);}
 	
 	#SocialLinks {width: 140px; float: left; clear: both;}
@@ -115,6 +120,11 @@
 		font-size: 15px;
 	}
 	
+	.Caption a, .TextPostBody a, .Source a, .Description a,
+	.Chat a, .PhotoCaption a, .VideoCaption a, .AudioEmbedCaptio a {
+		max-width: 680px;	
+	}
+	
 	.Caption {margin-top: 20px;}
 	.AudioInfo {width: 440px; float: right; clear: none; padding-right: 20px; font-family: Georgia, "Times New Roman", Serif; font-size: 15px;}
 	.Source {margin-bottom: 20px;}
@@ -122,7 +132,7 @@
 	.TextPostBody li {list-style: disc; padding-left: 10px; margin: 0 0 5px 18px;}
 	
 	.TextPostBody blockquote, .PhotoPost blockquote, 
-	.QuotePost blockquote .LinkPost blockquote, 
+	.QuotePost blockquote, .LinkPost blockquote, 
 	.VideoPost blockquote, .AudioEmbedCaption blockquote {
 		border-left: solid 1px rgb(88,88,89);
 		margin-bottom: 20px;
@@ -217,13 +227,13 @@
 	========================================================*/
 	
 	.Pagination {width: 780px; float: right; clear: both; margin: 0 10px 0 0; padding: 20px 0; border-top: 1px solid rgb(209,210,213);}
-	.Pagination a:link, .Pagination a:visited {color: rgb(63,63,63);}
+	.Pagination a:link, .Pagination a:visited {color: {color:AltText};}
 	.Pagination a:hover {color: rgb(0,0,0);}
-	#Next, #Back, #TotlePages {width: 60px; float: right; clear: none; padding: 20px 0; margin: -21px 0; font-weight: bold; color: rgb(63,63,63); border-top: 1px solid rgb(169,170,173);}
+	#Next, #Back, #TotlePages {width: 60px; float: right; clear: none; padding: 20px 0; margin: -21px 0; font-weight: bold; color: {color:AltText}; border-top: 1px solid rgb(169,170,173);}
 	#TotlePages {width: 140px; float: left; clear: none;}
 	#PageOf {font-family: Georgia, "Times New Roman", Serif; font-style: italic; font-weight: normal; }
 	#Back {margin: -21px 100px -21px 0;}
-	#Copyright {width: 780px; float: right; clear: both; font-size: 11px; padding: 10px 0 50px 0; margin: 0 10px 0 0; border-top: 1px solid rgb(209,210,213);}
+	#Copyright {width: 780px; float: right; clear: both; font-size: 11px; padding: 10px 0 50px 0; margin: 0 10px 0 0; color: {color:AltText}; border-top: 1px solid rgb(209,210,213);}
 	
 	/*========================================================
 		Disqus
@@ -266,11 +276,18 @@
 			
 		});
 	</script>
-	
+
+	<meta name="if:Small Title" content="0"/>
 	<meta name="if:Infinite Scroll" content="0"/>
+	
 	<meta name="text:Blog Subtitle" content="..."/>
+	
+	<meta name="color:Title" content="#525252"/>
+	<meta name="color:AltText" content="#3f3f3f"/>
 	<meta name="color:Background" content="#e3e5e8"/>
 	<meta name="color:Highlight" content="#0099cb"/>
+
+	
 	<meta name="text:Disqus Shortname" content=""/>
 	<meta name="text:Dribbble Username" content=""/>
 	<meta name="text:Facebook Username" content=""/>
