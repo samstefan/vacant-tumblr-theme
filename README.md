@@ -1,4 +1,4 @@
-# Vacant Tumblr Theme v1.2
+# Vacant Tumblr Theme v1.3
 
 [Demo](http://vacant.samstefan.co.uk) and
 [Tumblr Install](http://www.tumblr.com/theme/31180).
@@ -8,6 +8,11 @@
 Vacant is a minimal 2 column Tumblr theme designed to show content at a large scale.
 
 ## Updates
+
+### 1.3
+* Retina Facebook and Social Links with new hover effect.
+* Updated Twitter icon.
+* More descriptive page titles.
 
 ### 1.2 
 
