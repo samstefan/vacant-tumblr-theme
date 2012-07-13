@@ -1,4 +1,4 @@
-# Vacant Tumblr Theme v1.2 -Scott Edition
+# Vacant Tumblr Theme v1.2
 
 [Demo](http://vacant.samstefan.co.uk) and
 [Tumblr Install](http://www.tumblr.com/theme/31180).
