@@ -9,7 +9,7 @@
 	cosnap.co.uk
 	-->
 
-	<title>{Title}</title>
+	<title>{block:PostSummary}{PostSummary} | {/block:PostSummary}{Title}</title>
 	
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="{Favicon}" />
@@ -403,7 +403,7 @@
 					
 					{block:IfTwitterUsername}
 					<a href="http://twitter.com/{text:Twitter Username}" title="Twitter">
-						<img src="http://static.tumblr.com/ubkenek/wialuyvfa/twitter-icon.png" alt="Twitter Icon"/>
+						<img src="http://static.tumblr.com/ubkenek/wialuyvfa/twitter-icon.png" alt="Twitter Icon" height="23" width="23"/>
 					</a><!-- End Twitter Link -->
 					{/block:IfTwitterUsername}
 					
