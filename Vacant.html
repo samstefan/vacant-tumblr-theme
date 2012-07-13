@@ -83,7 +83,13 @@
 	#SideBarNav li a:hover {color: rgb(0,0,0);}
 	
 	#SocialLinks {width: 140px; float: left; clear: both;}
-	#SocialLinks a {float: left; clear: none; margin: 5px 5px 0 0;}
+	#SocialLinks a {float: left; clear: none; margin: 5px 5px 0 0;
+    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
+	-o-transition: opacity 0.5s;
+	timing-function: ease-in-out;
+    opacity: 1;}
 	#SocialLinks a:hover {opacity: 0.5;}
 	
 	/*========================================================
@@ -355,7 +361,7 @@
 					
 					{block:IfFacebookUsername}
 					<a href="http://facebook.com/{text:Facebook Username}" title="Facebook">
-						<img src="http://static.tumblr.com/ubkenek/AIkluyulc/facebook-icon.png" alt="Facebook Icon"/>
+						<img src="http://static.tumblr.com/erhzwgm/CKEm741sz/facebook-icon.png" alt="Facebook Icon" height="23" width="23"/>
 					</a><!-- End Facebook Link -->
 					{/block:IfFacebookUsername}
 					
@@ -403,7 +409,7 @@
 					
 					{block:IfTwitterUsername}
 					<a href="http://twitter.com/{text:Twitter Username}" title="Twitter">
-						<img src="http://static.tumblr.com/ubkenek/wialuyvfa/twitter-icon.png" alt="Twitter Icon" height="23" width="23"/>
+						<img src="http://static.tumblr.com/erhzwgm/0wCm741y8/twitter-icon.png" alt="Twitter Icon" height="23" width="23"/>
 					</a><!-- End Twitter Link -->
 					{/block:IfTwitterUsername}
 					
