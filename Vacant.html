@@ -9,7 +9,7 @@
 	cosnap.co.uk
 	-->
 
-	<title>{Title}</title>
+	<title>{block:PostSummary}{PostSummary} | {/block:PostSummary}{Title}</title>
 	
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="{Favicon}" />
@@ -38,7 +38,12 @@
 	#Wrapper {width: 960px; margin: 0 auto;}
 	#Header, #Body {width: 960px; margin: 40px 10px 0 10px; float: left; clear: both;}
 	#Body {width: 940px;}
-	a:link, a:visited {color: {color:Highlight}; text-decoration: none;}
+	a:link, a:visited {transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+	-o-transition: color 0.5s;
+	timing-function: ease-in-out;
+    color: {color:Highlight}; text-decoration: none;}
 	a:hover {color: rgb(63,63,63);}
 	a:active {color: rgb(177,181,185);}
 	#SideBar, .Caption, .TextPostBody, .Source, .Description, .AudioInfo, .AudioEmbedCaption, .PhotoCaption {line-height: 1.5;}
@@ -51,10 +56,16 @@
 		Header
 	========================================================*/
 
-	#BlogTitle {width: 620px; float: left;	clear: none; font-size: 48px; font-weight: bold;}
-	#BlogTitle a, #BlogTitle a:link, #BlogTitle a:visited {color: {color:Title};}
+	#BlogTitle {width: 620px; float: left;	clear: none; font-size: 40px; font-weight: bold;}
+	#BlogTitle a, #BlogTitle a:link, #BlogTitle a:visited {
+        transition: opacity 0.5s;
+        -webkit-transition: opacity 0.4s;
+        -moz-transition: opacity 0.4s;
+	    -o-transition: opacity 0.4s;
+	    timing-function: ease-in-out;
+        opacity: 1; color: {color:Title};}
 	#BlogTitle a:hover { opacity: 0.5; }
-	#BlogTitle a:active {top:1px; position:relative;}
+	#BlogTitle a:active {opacity: 0.85; textshadow: 1px 1px 2px black;}
 	
 	{block:IfSmallTitle}#BlogTitle {font-size: 25px; margin: 22px 0 0 0;}{/block:IfSmallTitle} 
 	
@@ -74,16 +85,22 @@
 		SideBar
 	========================================================*/
 	
-	#SideBar {width: 140px; float: left; clear: none; font-size: 12px; margin: 0 20px 0 0; color: {color:AltText};}
+	#SideBar {width: 140px; float: left; clear: none; font-size: 12px; margin: 0 20px 0 0; top: -30px; position: relative; color: {color:AltText};}
 	#Description {width: inherit; float: left; clear: both; margin: 0 0 10px 0;}
 	#ProfilePhoto {margin: 0 0 10px 0;} 
-	#SideBarNav {width: 140px; float: left; clear: none; border-top: 1px solid rgb(209,210,213); font-weight: bold; font-size: 14px;}
+	#SideBarNav {width: 140px; float: left; clear: none; /* border-top: 1px solid rgb(209,210,213); */ font-weight: bold; font-size: 14px;}
 	#SideBarNav li {width: 140px; border-bottom: 1px solid rgb(209,210,213); margin: 5px 0; padding-bottom: 5px;}
 	#SideBarNav li a {color: {color:AltText};}
 	#SideBarNav li a:hover {color: rgb(0,0,0);}
 	
-	#SocialLinks {width: 140px; float: left; clear: both;}
-	#SocialLinks a {float: left; clear: none; margin: 5px 5px 0 0;}
+	#SocialLinks {width: 140px; float: right; clear: both;}
+	#SocialLinks a {float: left; clear: none; margin: 5px 5px 0 0;
+    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
+	-o-transition: opacity 0.5s;
+	timing-function: ease-in-out;
+    opacity: 1;}
 	#SocialLinks a:hover {opacity: 0.5;}
 	
 	/*========================================================
@@ -182,7 +199,7 @@
 	.PostTitle a:link, .PostTitle a:visited {color: rgb(82,82,82);}
 	.PostTitle a:hover {color: rgb(0,0,0);}
 
-	.Quote {width: 680px; float: left; clear: none; margin: 0 20px 20px 0; font-family: Georgia, "Times New Roman", Serif; font-style: italic; font-size: 35px;}
+	.Quote {width: 680px; float: left; clear: none; margin: 0 20px 20px 0; font-family: Georgia, "Times New Roman", Serif; font-style: italic; font-size: 20px;}
 	
 	.Chat {width: 700px; margin: 0 -20px 20px 0;}
 	.Chat li.odd, .Chat li.even {padding: 5px;  border-top: 1px solid rgb(241,241,241);}
@@ -192,7 +209,7 @@
 	
 	.VideoPost object, .VideoPost embed, .VideoPost iframe {width: 780px !important; max-width: 780px; height: 445px; margin: -20px 0 20px 0;}
 	
-	.Question {width: 680px; float: left; clear: both; margin: 0 -20px 10px 0; padding-bottom: 10px; font-style:italic; border-bottom: 1px solid rgb(243,245,247);}
+	.Question {width: 680px; float: left; clear: both; margin: 0 -20px 10px 0; padding-bottom: 10px; font-style:normal; border-bottom: 1px solid rgb(243,245,247);}
 	.QuestionHighlight { display: block; font-family: Helvetica, Arial, Sans-Serif; font-weight: bold; font-style: normal; color: {color:Highlight};}
 	
 	/*========================================================
@@ -331,16 +348,13 @@
 		<div id="Body">
 		
 			<div id="SideBar">
-				<img id="ProfilePhoto" src="{PortraitURL-128}" alt="Profile Photo" />
+			<!--	<img id="ProfilePhoto" src="{PortraitURL-128}" alt="Profile Photo" /> -->
 					
 				{block:Description}<div id="Description">{Description}</div>{/block:Description}
 				
 				<ol id="SideBarNav">
 					{block:AskEnabled}<li><a href="/ask" title="Ask a question">{AskLabel}</a></li>{/block:AskEnabled}
-					{block:SubmissionsEnabled}<li><a href="/submit" title="{SubmitLabel}">{SubmitLabel}</a></li>{/block:SubmissionsEnabled} 
-					
-					<li><a href="{RSS}" title="RSS Feed">RSS Feed</a></li>
-					<li><a href="/mobile" title="View mobile version">Mobile</a></li>
+					{block:SubmissionsEnabled}<li><a href="/submit" title="{SubmitLabel}">{SubmitLabel}</a></li>{/block:SubmissionsEnabled}
 					
 					{block:HasPages}{block:Pages}<li><a href="{URL}" title="{Label}">{Label}</a></li>{/block:Pages}{/block:HasPages}
 				</ol><!-- End SideBar Navigation -->
@@ -403,7 +417,7 @@
 					
 					{block:IfTwitterUsername}
 					<a href="http://twitter.com/{text:Twitter Username}" title="Twitter">
-						<img src="http://static.tumblr.com/ubkenek/wialuyvfa/twitter-icon.png" alt="Twitter Icon"/>
+						<img src="http://static.tumblr.com/erhzwgm/tucm7313c/twitter_link.png" alt="Twitter Icon" height="23" width="23"/>
 					</a><!-- End Twitter Link -->
 					{/block:IfTwitterUsername}
 					
@@ -654,7 +668,7 @@
 			{/block:PreviousPage}
 		</div><!-- End Pagination -->
 		
-		<div id="Copyright">This blog is powered by <a href="http://tumblr.com" title="Tumblr">Tumblr</a> and designed by <a href="http://cosnap.co.uk" title="The CoSnap website">CoSnap</a>.</div>
+		<div id="Copyright">This blog is powered by <a href="http://tumblr.com" title="Tumblr">Tumblr</a> and designed by <a href="http://cosnap.co.uk" title="The CoSnap website">CoSnap</a> and tweaks by yours truly.</div>
 			
 	</div><!-- End Page Wrapper -->
 	
