@@ -10,8 +10,8 @@ Vacant is a minimal 2 column Tumblr theme designed to show content at a large sc
 ## Updates
 
 ### 1.3
-* Retina Twitter, Facebook, Google+ icons.
-* Updated Twitter icon.
+* Retina Twitter, Facebook, Google+, and GitHub icons.
+* Updated with "Three Circle" Twitter icon.
 * Social Links have a new hover effect.
 * More descriptive page titles.
 
