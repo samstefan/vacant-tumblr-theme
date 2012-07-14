@@ -36,8 +36,8 @@
 			
 	html, body {background: {color:Background}; height: 100%; color: rgb(82,82,82); font-family: Helvetica, Arial, Sans-Serif;}
 	#Wrapper {width: 960px; margin: 0 auto;}
-	#Header, #Body {width: 960px; margin: 40px 10px 0 10px; float: left; clear: both;}
-	#Body {width: 940px;}
+	#Header, #Body {width: 100%; margin: 40px 10px 0px 10px; float: left; clear: both;}
+	#Body {width: 100%;}
 	a:link, a:visited {color: {color:Highlight}; text-decoration: none;}
 	a:hover {color: rgb(63,63,63);}
 	a:active {color: rgb(177,181,185);}
@@ -51,7 +51,7 @@
 		Header
 	========================================================*/
 
-	#BlogTitle {width: 620px; float: left;	clear: none; font-size: 48px; font-weight: bold;}
+	#BlogTitle {width: 620px; font-size: 54px; font-weight: bold;}
 	#BlogTitle a, #BlogTitle a:link, #BlogTitle a:visited {color: {color:Title};}
 	#BlogTitle a:hover { opacity: 0.5; }
 	#BlogTitle a:active {top:1px; position:relative;}
@@ -74,15 +74,15 @@
 		SideBar
 	========================================================*/
 	
-	#SideBar {width: 140px; float: left; clear: none; font-size: 12px; margin: 0 20px 0 0; color: {color:AltText};}
-	#Description {width: inherit; float: left; clear: both; margin: 0 0 10px 0;}
+	#SideBar {width: 100%; font-size: 12px; margin: 0px 20px; color: {color:AltText};}
+	#Description {width: inherit; margin: 0 0 10px 0;}
 	#ProfilePhoto {margin: 0 0 10px 0;} 
-	#SideBarNav {width: 140px; float: left; clear: none; border-top: 1px solid rgb(209,210,213); font-weight: bold; font-size: 14px;}
-	#SideBarNav li {width: 140px; border-bottom: 1px solid rgb(209,210,213); margin: 5px 0; padding-bottom: 5px;}
+	#SideBarNav {width: 100%;  border-top: 1px solid rgb(209,210,213); font-weight: bold; font-size: 14px;}
+	#SideBarNav li {width: 100%; border-bottom: 1px solid rgb(209,210,213); margin: 5px 0; padding-bottom: 5px;}
 	#SideBarNav li a {color: {color:AltText};}
 	#SideBarNav li a:hover {color: rgb(0,0,0);}
 	
-	#SocialLinks {width: 140px; float: left; clear: both;}
+	#SocialLinks {width: 100%; text-align: center;}
 	#SocialLinks a {float: left; clear: none; margin: 5px 5px 0 0;
     transition: opacity 0.5s;
     -webkit-transition: opacity 0.5s;
@@ -96,11 +96,11 @@
 		Page Content
 	========================================================*/
 	
-	#Posts {width: 780px; float: right; clear: none;}
+	#Posts {width: 100%; float: right; clear: none;}
 	.PhotoPost, .TextPost, .QuotePost, .LinkPost, 
 	.ChatPost, .VideoPost, .AudioPost, .AnswerPost,
 	.PhotoSetPost {
-		width: 780px;
+		width: 100%;
 		float: left;
 		clear: none;
 		padding: 20px 0 0 0;
@@ -215,9 +215,9 @@
 		Footer
 	========================================================*/
 	
-	.Footer {width: 780px; float: right; clear: both; background: white;}
+	.Footer {width: 100%; float: right; clear: both; background: white;}
 	.FooterLine {height: 1px; width: 700px; float: right; clear: both; background: rgb(235,237,239);}		
-	.FooterBoarder {width: 780px; height: 6px; float: left; clear: both;background: url(http://static.tumblr.com/ubkenek/8Ouln3hu9/footerboarder.png) no-repeat bottom; margin-bottom: 40px;}
+	.FooterBoarder {width: 100%; height: 6px; float: left; clear: both;background: url(http://static.tumblr.com/ubkenek/8Ouln3hu9/footerboarder.png) no-repeat bottom; margin-bottom: 40px;}
 	.Footer ol, .CameraMeta {width: 700px; float: right; clear: both;}
 	.CameraMeta {clear: none;}
 	.Footer li {float: left; clear: none; margin: 10px 10px 10px 0; font-weight: bold; text-transform: uppercase; font-size: 10px; color: rgb(177,181,185);}
@@ -316,118 +316,7 @@
 			
 		<div id="Header">
 			<div id="BlogTitle"><a href="/" title="{Title}">{Title}</a></div>
-			<ol id="TopNavNumbers">
-				<li class="Search">00.</li>
-				<li>01.</li>
-				<li>02.</li>
-			</ol><!-- End Top Navigation -->
-			<div class="HeaderBreak"></div>
-			
-			<div id="LowerHeader">
-				{block:IfBlogSubtitle}<div id="SubTitle">{text:Blog Subtitle}</div>{/block:IfBlogSubtitle}
-				<a class="HeaderLinks" href="/archive">Archive</a>
-				<a class="HeaderLinks" href="/random">Random</a>
-				<form action="/search" method="get" >
-					<input id="Search" class="SearchBox" type="text" name="q" value="{SearchQuery}" placeholder="Search"/>
-				</form><!-- End Search Box Form -->
-			</div><!-- End Lower Header -->
-			<div class="HeaderBreak"></div>
-		</div><!-- End Header -->
-		
-		<div id="Body">
-		
-			<div id="SideBar">
-				<img id="ProfilePhoto" src="{PortraitURL-128}" alt="Profile Photo" />
-					
-				{block:Description}<div id="Description">{Description}</div>{/block:Description}
-				
-				<ol id="SideBarNav">
-					{block:AskEnabled}<li><a href="/ask" title="Ask a question">{AskLabel}</a></li>{/block:AskEnabled}
-					{block:SubmissionsEnabled}<li><a href="/submit" title="{SubmitLabel}">{SubmitLabel}</a></li>{/block:SubmissionsEnabled} 
-					
-					<li><a href="{RSS}" title="RSS Feed">RSS Feed</a></li>
-					<li><a href="/mobile" title="View mobile version">Mobile</a></li>
-					
-					{block:HasPages}{block:Pages}<li><a href="{URL}" title="{Label}">{Label}</a></li>{/block:Pages}{/block:HasPages}
-				</ol><!-- End SideBar Navigation -->
-					
-				<div id="SocialLinks">
-				
-					{block:IfDribbbleUsername}
-					<a href="http://dribbble.com/{text:Dribbble Username}" title="Dribbble">
-						<img src="http://static.tumblr.com/ubkenek/pvyluyuim/dribbble-icon.png" alt="Dribble Icon"/>
-					</a><!-- End Dribbl  e Link -->
-					{/block:IfDribbbleUsername}
-					
-					{block:IfFacebookUsername}
-					<a href="http://facebook.com/{text:Facebook Username}" title="Facebook">
-						<img src="http://static.tumblr.com/erhzwgm/FYtm74zsu/facebook-icon.png" alt="Facebook Icon" height="23" width="23"/>
-					</a><!-- End Facebook Link -->
-					{/block:IfFacebookUsername}
-					
-					{block:IfFlickrUsername}
-					<a href="http://flickr.com/{text:Flickr Username}" title="Flickr">
-						<img src="http://static.tumblr.com/ubkenek/SAAluyut9/flickr-icon.png" alt="Flickr Icon"/>
-					</a><!-- End Flickr Link -->
-					{/block:IfFlickrUsername}
-					
-					{block:IfForrstUsername}
-					<a href="http://forrst.com/people/{text:Forrst Username}" title="Forrst">
-						<img src="http://static.tumblr.com/ubkenek/rfoluyuxn/forrst-icon.png" alt="Forrst Icon"/>
-					</a><!-- End Forrst Link -->
-					{/block:IfForrstUsername}
-					
-					{block:IfFoursquareUsername}
-					<a href="https://foursquare.com/{text:Foursquare Username}" title="Foursquare">
-						<img src="http://static.tumblr.com/ubkenek/S3Zluyv00/foursquare-icon.png" alt="Foursquare Icon"/>
-					</a><!-- End Foursquare -->
-					{/block:IfFoursquareUsername}
-					
-					{block:IfGitHubUsername}
-					<a href="https://github.com/{text:GitHub Username}" title="GitHub">
-						<img src="http://static.tumblr.com/erhzwgm/JVjm74zzb/github-icon.png" alt="GitHub" height="23" width="23"/>
-					</a><!-- End GitHub Link -->
-					{/block:IfGitHubUsername}
-					
-					{block:IfGooglePlusUsernumber}
-					<a href="https://plus.google.com/u/1/{text:GooglePlus Usernumber}" title="Google Plus">
-						<img src="http://static.tumblr.com/erhzwgm/Ipsm74vwu/googleplus-icon.png" alt="GooglePlus Icon" height="23" width="23"/>
-					</a><!-- End Google Plus Link -->
-					{/block:IfGooglePlusUsernumber}
-					
-					{block:IfLastfmUsername}
-					<a href="http://last.fm/user/{text:Lastfm Username}" title="Last fm">
-						<img src="http://static.tumblr.com/ubkenek/NMcluyvdm/lastfm-icon.png" alt="Last fm Icon"/>
-					</a><!-- End Last fm Link -->
-					{/block:IfLastfmUsername}
-					
-					{block:IfLetterBoxdUsername}
-					<a href="http://letterboxd.com/{text:LetterBoxd Username}" title="LetterBoxd">
-						<img src="http://static.tumblr.com/ubkenek/7JJluywko/letterboxd-icon.png" alt="LetterBoxd Icon"/>
-					</a><!-- End LetterBoxd Link -->
-					{/block:IfLetterBoxdUsername}
-					
-					{block:IfTwitterUsername}
-					<a href="http://twitter.com/{text:Twitter Username}" title="Twitter">
-						<img src="http://static.tumblr.com/erhzwgm/dpgm7502h/twitter-icon.png" alt="Twitter Icon" height="23" width="23"/>
-					</a><!-- End Twitter Link -->
-					{/block:IfTwitterUsername}
-					
-					{block:IfVimeoUsername}
-					<a href="http://vimeo.com/{text:Vimeo Username}" title="Vimeo">
-						<img src="http://static.tumblr.com/ubkenek/szjluyw9v/vimeo-icon.png" alt="Vimeo Icon"/>
-					</a><!-- End Vimeo Link -->
-					{/block:IfVimeoUsername}
-										
-					<!-- {block:IfYouTubeUsername}
-					<a href="http://youtube.com/user/{text:YouTube Username}" title="YouTube">
-						<img src="http://static.tumblr.com/ubkenek/c1Gluz2id/youtube-icon.png" alt="YouTube Icon"/>
-					</a>
-					{/block:IfYouTubeUsername} -->
-					
-				</div><!-- End Social Links -->
-				
-			</div><!-- End Side Bar  -->
+
 			
 			<div id="Posts">
 			{block:Posts}
@@ -639,7 +528,118 @@
 			{PostNotes}
 			
 			{/block:Posts}
-			</div><!-- End Posts -->	
+			</div><!-- End Posts -->			<ol id="TopNavNumbers">
+				<li class="Search">00.</li>
+				<li>01.</li>
+				<li>02.</li>
+			</ol><!-- End Top Navigation -->
+			<div class="HeaderBreak"></div>
+			
+			<div id="LowerHeader">
+				{block:IfBlogSubtitle}<div id="SubTitle">{text:Blog Subtitle}</div>{/block:IfBlogSubtitle}
+				<a class="HeaderLinks" href="/archive">Archive</a>
+				<a class="HeaderLinks" href="/random">Random</a>
+				<form action="/search" method="get" >
+					<input id="Search" class="SearchBox" type="text" name="q" value="{SearchQuery}" placeholder="Search"/>
+				</form><!-- End Search Box Form -->
+			</div><!-- End Lower Header -->
+			<div class="HeaderBreak"></div>
+		</div><!-- End Header -->
+		
+		<div id="Body">
+		
+			<div id="SideBar">
+				
+					
+				{block:Description}<div id="Description">{Description}</div>{/block:Description}
+				
+				<ol id="SideBarNav">
+					{block:AskEnabled}<li><a href="/ask" title="Ask a question">{AskLabel}</a></li>{/block:AskEnabled}
+					{block:SubmissionsEnabled}<li><a href="/submit" title="{SubmitLabel}">{SubmitLabel}</a></li>{/block:SubmissionsEnabled} 
+					
+					<li><a href="{RSS}" title="RSS Feed">RSS Feed</a></li>
+					<li><a href="/mobile" title="View mobile version">Mobile</a></li>
+					
+					{block:HasPages}{block:Pages}<li><a href="{URL}" title="{Label}">{Label}</a></li>{/block:Pages}{/block:HasPages}
+				</ol><!-- End SideBar Navigation -->
+					
+				<div id="SocialLinks">
+				
+					{block:IfDribbbleUsername}
+					<a href="http://dribbble.com/{text:Dribbble Username}" title="Dribbble">
+						<img src="http://static.tumblr.com/ubkenek/pvyluyuim/dribbble-icon.png" alt="Dribble Icon"/>
+					</a><!-- End Dribbl  e Link -->
+					{/block:IfDribbbleUsername}
+					
+					{block:IfFacebookUsername}
+					<a href="http://facebook.com/{text:Facebook Username}" title="Facebook">
+						<img src="http://static.tumblr.com/erhzwgm/FYtm74zsu/facebook-icon.png" alt="Facebook Icon" height="23" width="23"/>
+					</a><!-- End Facebook Link -->
+					{/block:IfFacebookUsername}
+					
+					{block:IfFlickrUsername}
+					<a href="http://flickr.com/{text:Flickr Username}" title="Flickr">
+						<img src="http://static.tumblr.com/ubkenek/SAAluyut9/flickr-icon.png" alt="Flickr Icon"/>
+					</a><!-- End Flickr Link -->
+					{/block:IfFlickrUsername}
+					
+					{block:IfForrstUsername}
+					<a href="http://forrst.com/people/{text:Forrst Username}" title="Forrst">
+						<img src="http://static.tumblr.com/ubkenek/rfoluyuxn/forrst-icon.png" alt="Forrst Icon"/>
+					</a><!-- End Forrst Link -->
+					{/block:IfForrstUsername}
+					
+					{block:IfFoursquareUsername}
+					<a href="https://foursquare.com/{text:Foursquare Username}" title="Foursquare">
+						<img src="http://static.tumblr.com/ubkenek/S3Zluyv00/foursquare-icon.png" alt="Foursquare Icon"/>
+					</a><!-- End Foursquare -->
+					{/block:IfFoursquareUsername}
+					
+					{block:IfGitHubUsername}
+					<a href="https://github.com/{text:GitHub Username}" title="GitHub">
+						<img src="http://static.tumblr.com/erhzwgm/JVjm74zzb/github-icon.png" alt="GitHub" height="23" width="23"/>
+					</a><!-- End GitHub Link -->
+					{/block:IfGitHubUsername}
+					
+					{block:IfGooglePlusUsernumber}
+					<a href="https://plus.google.com/u/1/{text:GooglePlus Usernumber}" title="Google Plus">
+						<img src="http://static.tumblr.com/ubkenek/G6uluz2hj/googleplus-icon.png" alt="GooglePlus Icon" height="23" width="23"/>
+					</a><!-- End Google Plus Link -->
+					{/block:IfGooglePlusUsernumber}
+					
+					{block:IfLastfmUsername}
+					<a href="http://last.fm/user/{text:Lastfm Username}" title="Last fm">
+						<img src="http://static.tumblr.com/ubkenek/NMcluyvdm/lastfm-icon.png" alt="Last fm Icon"/>
+					</a><!-- End Last fm Link -->
+					{/block:IfLastfmUsername}
+					
+					{block:IfLetterBoxdUsername}
+					<a href="http://letterboxd.com/{text:LetterBoxd Username}" title="LetterBoxd">
+						<img src="http://static.tumblr.com/ubkenek/7JJluywko/letterboxd-icon.png" alt="LetterBoxd Icon"/>
+					</a><!-- End LetterBoxd Link -->
+					{/block:IfLetterBoxdUsername}
+					
+					{block:IfTwitterUsername}
+					<a href="http://twitter.com/{text:Twitter Username}" title="Twitter">
+						<img src="http://static.tumblr.com/erhzwgm/dpgm7502h/twitter-icon.png" alt="Twitter Icon" height="23" width="23"/>
+					</a><!-- End Twitter Link -->
+					{/block:IfTwitterUsername}
+					
+					{block:IfVimeoUsername}
+					<a href="http://vimeo.com/{text:Vimeo Username}" title="Vimeo">
+						<img src="http://static.tumblr.com/ubkenek/szjluyw9v/vimeo-icon.png" alt="Vimeo Icon"/>
+					</a><!-- End Vimeo Link -->
+					{/block:IfVimeoUsername}
+										
+					<!-- {block:IfYouTubeUsername}
+					<a href="http://youtube.com/user/{text:YouTube Username}" title="YouTube">
+						<img src="http://static.tumblr.com/ubkenek/c1Gluz2id/youtube-icon.png" alt="YouTube Icon"/>
+					</a>
+					{/block:IfYouTubeUsername} -->
+					
+				</div><!-- End Social Links -->
+				
+			</div><!-- End Side Bar  -->	
 		</div><!-- End Body Content -->
 	
 		<div class="Pagination">
