@@ -10,8 +10,9 @@ Vacant is a minimal 2 column Tumblr theme designed to show content at a large sc
 ## Updates
 
 ### 1.3
-* Retina Facebook and Social Links with new hover effect.
+* Retina Twitter, Facebook, Google+ icons.
 * Updated Twitter icon.
+* Social Links have a new hover effect.
 * More descriptive page titles.
 
 ### 1.2 
@@ -37,7 +38,7 @@ Vacant may be used by anyone for any purpose, in both a personal and commercial 
 
 ## Credits
 
-Vacant was created by [Sam Stefan](http://samstefan.co.uk).
+Vacant was created by [Sam Stefan](http://samstefan.co.uk) with additions by [Scott Smith](http://BeyondTheCo.de).
 
 Infinite Scroll jQuery Plugin Copyright Paul Irish, Licensed GPL & MIT.
 
