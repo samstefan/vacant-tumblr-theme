@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="50"
+   height="50"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="linkicon.svg"
+   inkscape:export-filename="/Users/Scott/Desktop/linkicon.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="7.9195959"
+     inkscape:cx="23.343636"
+     inkscape:cy="28.531652"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1073"
+     inkscape:window-height="772"
+     inkscape:window-x="503"
+     inkscape:window-y="9"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1002.3622)">
+    <path
+       sodipodi:type="arc"
+       style="fill:#3f3f3f;fill-opacity:1;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path3068"
+       sodipodi:cx="25.569487"
+       sodipodi:cy="17.359446"
+       sodipodi:rx="4.7350903"
+       sodipodi:ry="4.7350903"
+       d="m 30.304577,17.359446 a 4.7350903,4.7350903 0 1 1 -9.470181,0 4.7350903,4.7350903 0 1 1 9.470181,0 z"
+       transform="matrix(1.8943745,0,0,1.8943745,-39.412368,1008.5606)" />
+    <path
+       transform="matrix(1.8943745,0,0,1.8943745,-23.167716,980.38758)"
+       d="m 30.304577,17.359446 a 4.7350903,4.7350903 0 1 1 -9.470181,0 4.7350903,4.7350903 0 1 1 9.470181,0 z"
+       sodipodi:ry="4.7350903"
+       sodipodi:rx="4.7350903"
+       sodipodi:cy="17.359446"
+       sodipodi:cx="25.569487"
+       id="path3862"
+       style="fill:#3f3f3f;fill-opacity:1;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       sodipodi:type="arc" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#3f3f3f;fill-opacity:1;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path3864"
+       sodipodi:cx="25.569487"
+       sodipodi:cy="17.359446"
+       sodipodi:rx="4.7350903"
+       sodipodi:ry="4.7350903"
+       d="m 30.304577,17.359446 a 4.7350903,4.7350903 0 1 1 -9.470181,0 4.7350903,4.7350903 0 1 1 9.470181,0 z"
+       transform="matrix(1.8943745,0,0,1.8943745,-7.4104742,1008.5606)" />
+    <rect
+       style="fill:#3f3f3f;fill-opacity:1;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect3874"
+       width="23.407101"
+       height="4.0876374"
+       x="13.029075"
+       y="1039.9456" />
+    <rect
+       y="602.68481"
+       x="-949.47437"
+       height="4.1964364"
+       width="28.153559"
+       id="rect3880"
+       style="fill:#3f3f3f;fill-opacity:1;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(0.56643892,-0.82410373,0.90784169,0.41931308,0,0)" />
+    <rect
+       transform="matrix(-0.4787927,-0.87792799,-0.94611059,0.3238437,0,0)"
+       style="fill:#3f3f3f;fill-opacity:1;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect3882"
+       width="28.153559"
+       height="4.1964364"
+       x="-1006.0595"
+       y="468.1734" />
+  </g>
+</svg>
