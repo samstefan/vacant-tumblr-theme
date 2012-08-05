@@ -1,4 +1,4 @@
-# Vacant Tumblr Theme v1.2
+# Vacant Tumblr Theme v1.3
 
 [Demo](http://vacant.samstefan.co.uk) and
 [Tumblr Install](http://www.tumblr.com/theme/31180).
@@ -8,6 +8,12 @@
 Vacant is a minimal 2 column Tumblr theme designed to show content at a large scale.
 
 ## Updates
+
+### 1.3
+* Retina Twitter, Facebook, Google+, and GitHub icons.
+* Updated with "Three Circle" Twitter icon.
+* Social Links have a new hover effect.
+* More descriptive page titles.
 
 ### 1.2 
 
@@ -32,7 +38,7 @@ Vacant may be used by anyone for any purpose, in both a personal and commercial 
 
 ## Credits
 
-Vacant was created by [Sam Stefan](http://samstefan.co.uk).
+Vacant was created by [Sam Stefan](http://samstefan.co.uk) with additions by [Scott Smith](http://BeyondTheCo.de).
 
 Infinite Scroll jQuery Plugin Copyright Paul Irish, Licensed GPL & MIT.
 

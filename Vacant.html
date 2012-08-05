@@ -9,7 +9,7 @@
 	cosnap.co.uk
 	-->
 
-	<title>{Title}</title>
+	<title>{block:PostSummary}{PostSummary} | {/block:PostSummary}{Title}</title>
 	
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="{Favicon}" />
@@ -83,7 +83,13 @@
 	#SideBarNav li a:hover {color: rgb(0,0,0);}
 	
 	#SocialLinks {width: 140px; float: left; clear: both;}
-	#SocialLinks a {float: left; clear: none; margin: 5px 5px 0 0;}
+	#SocialLinks a {float: left; clear: none; margin: 5px 5px 0 0;
+    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
+	-o-transition: opacity 0.5s;
+	timing-function: ease-in-out;
+    opacity: 1;}
 	#SocialLinks a:hover {opacity: 0.5;}
 	
 	/*========================================================
@@ -165,9 +171,9 @@
 	.AudioEmbedCaption { margin: 20px 0 0 0;}
 	
 	.PhotoIcon{background: url(http://static.tumblr.com/ubkenek/cVFlmyk9m/photoicon.png) no-repeat center top;}
-	.TextIcon {background: url(http://static.tumblr.com/ubkenek/YnZlmzfmi/texticon.png) no-repeat center bottom;}
-	.QuoteIcon {background: url(http://static.tumblr.com/ubkenek/kL8lmzk3j/quoteicon.png) no-repeat center bottom;}
-	.LinkIcon {background: url(http://static.tumblr.com/ubkenek/0cFlmzkoi/linkicon.png) no-repeat center bottom;}
+	.TextIcon {background: url(http://static.tumblr.com/erhzwgm/mlbm79q9j/texticon.png) no-repeat center bottom; background-size: 21px 21px;}
+	.QuoteIcon {background: url(http://static.tumblr.com/erhzwgm/uhzm7hhrc/retinaquoteicon.png) no-repeat center bottom; background-size: 23px 18px;}
+	.LinkIcon {background: url(http://static.tumblr.com/erhzwgm/dMAm79psh/linkicon.png) no-repeat center bottom; background-size: 21px 21px;}
 	.ChatIcon {background: url(http://static.tumblr.com/ubkenek/HBwlmzlsf/chaticon.png) no-repeat center bottom;}
 	.VideoIcon {background: url(http://static.tumblr.com/ubkenek/Z4Ylmzq43/videoicon.png) no-repeat center top;}
 	.AudioIcon {background: url(http://static.tumblr.com/ubkenek/ALtlmzt69/musicicon.png) no-repeat center bottom;}
@@ -350,12 +356,12 @@
 					{block:IfDribbbleUsername}
 					<a href="http://dribbble.com/{text:Dribbble Username}" title="Dribbble">
 						<img src="http://static.tumblr.com/ubkenek/pvyluyuim/dribbble-icon.png" alt="Dribble Icon"/>
-					</a><!-- End Dribbl  e Link -->
+					</a><!-- End Dribble Link -->
 					{/block:IfDribbbleUsername}
 					
 					{block:IfFacebookUsername}
 					<a href="http://facebook.com/{text:Facebook Username}" title="Facebook">
-						<img src="http://static.tumblr.com/ubkenek/AIkluyulc/facebook-icon.png" alt="Facebook Icon"/>
+						<img src="http://static.tumblr.com/erhzwgm/FYtm74zsu/facebook-icon.png" alt="Facebook Icon" height="23" width="23"/>
 					</a><!-- End Facebook Link -->
 					{/block:IfFacebookUsername}
 					
@@ -379,13 +385,13 @@
 					
 					{block:IfGitHubUsername}
 					<a href="https://github.com/{text:GitHub Username}" title="GitHub">
-						<img src="http://static.tumblr.com/ubkenek/Qv0luyv55/github-icon.png" alt="GitHub"/>
+						<img src="http://static.tumblr.com/erhzwgm/JVjm74zzb/github-icon.png" alt="GitHub" height="23" width="23"/>
 					</a><!-- End GitHub Link -->
 					{/block:IfGitHubUsername}
 					
 					{block:IfGooglePlusUsernumber}
 					<a href="https://plus.google.com/u/1/{text:GooglePlus Usernumber}" title="Google Plus">
-						<img src="http://static.tumblr.com/ubkenek/G6uluz2hj/googleplus-icon.png" alt="GooglePlus Icon"/>
+						<img src="http://static.tumblr.com/erhzwgm/Ipsm74vwu/googleplus-icon.png" alt="GooglePlus Icon" height="23" width="23"/>
 					</a><!-- End Google Plus Link -->
 					{/block:IfGooglePlusUsernumber}
 					
@@ -403,7 +409,7 @@
 					
 					{block:IfTwitterUsername}
 					<a href="http://twitter.com/{text:Twitter Username}" title="Twitter">
-						<img src="http://static.tumblr.com/ubkenek/wialuyvfa/twitter-icon.png" alt="Twitter Icon"/>
+						<img src="http://static.tumblr.com/erhzwgm/dpgm7502h/twitter-icon.png" alt="Twitter Icon" height="23" width="23"/>
 					</a><!-- End Twitter Link -->
 					{/block:IfTwitterUsername}
 					
