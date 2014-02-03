@@ -1,5 +1,4 @@
 # Vacant Tumblr Theme
-===
 
 [Demo](http://vacant.samstefan.co.uk) and
 [Tumblr Install](http://www.tumblr.com/theme/31180).
