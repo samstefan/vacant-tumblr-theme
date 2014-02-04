@@ -17,12 +17,10 @@ Install the theme via the [theme page](http://www.tumblr.com/theme/31180) or cop
 ---
 
 * 1.2.0 - Updated side bar sccial links and icons.
-
 * 1.1.0 -
   * Low-res photoset support and detection added by [Craig Rood](http://www.craigrood.com)
   * Low-res photoset centring.
-
-* 1.0.0 - Initial Release.
+* 1.0.0 - Initial release.
 
 ## Licence
 ---
